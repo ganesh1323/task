@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "a9c0d05d-a4a7-4981-a139-bc2ab99b5843",
+		"name": "testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5079629"
+	},
+	"item": [
+		{
+			"name": "addCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"categoryName\":\"cat3\",\"categoryType\":\"product\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/testing/addCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"testing",
+						"addCategory"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "addCategory",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"categoryName\":\"cat3\",\"categoryType\":\"product\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/testing/addCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"testing",
+								"addCategory"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "258"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"102-Jqbd03doPmWy5wHaAFJANDlbqmI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Jan 2023 12:42:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"category successfully added\",\n    \"data\": {\n        \"categoryName\": \"cat3\",\n        \"categoryType\": \"product\",\n        \"status\": true,\n        \"subCatRef\": [],\n        \"createdAt\": \"2023-01-12T12:42:06.805Z\",\n        \"updatedAt\": \"2023-01-12T12:42:06.805Z\",\n        \"categoryId\": \"63c0001efa23f37eaafca203\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "subCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"catId\":\"63bffea2071f1e51a323dd3b\",\"subCatName\":\"subCat3\",\"subCatType\":\"type1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/testing/subCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"testing",
+						"subCategory"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "subCategory",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"catId\":\"63bffea2071f1e51a323dd3b\",\"subCatName\":\"subCat3\",\"subCatType\":\"type1\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/testing/subCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"testing",
+								"subCategory"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "362"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"16a-4172XiyCidpT8pRmddkjgdU1Awo\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Jan 2023 12:42:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"meddage\": \"sub category added successfully\",\n    \"data\": {\n        \"subCatName\": \"subCat3\",\n        \"subCatType\": \"type1\",\n        \"status\": true,\n        \"categoryRef\": {\n            \"categoryName\": \"cat1\",\n            \"categoryType\": \"product\",\n            \"categoryId\": \"63bffea2071f1e51a323dd3b\"\n        },\n        \"subChildRef\": [],\n        \"createdAt\": \"2023-01-12T12:42:25.576Z\",\n        \"updatedAt\": \"2023-01-12T12:42:25.576Z\",\n        \"subCatId\": \"63c00031fa23f37eaafca206\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "subChild",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"subCatId\":\"63bffed6071f1e51a323dd41\",\"subChildName\":\"child5\",\"subChildType\":\"type3\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/testing/subChild",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"testing",
+						"subChild"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "subChild",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"subCatId\":\"63bffed6071f1e51a323dd41\",\"subChildName\":\"child4\",\"subChildType\":\"type3\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/testing/subChild",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"testing",
+								"subChild"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "336"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"150-KvJwHcS063iIkwFy8ZLEBqaJOSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Jan 2023 12:48:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"meddage\": \"childCat successfully added\",\n    \"data\": {\n        \"subChildName\": \"child4\",\n        \"subChildType\": \"type3\",\n        \"status\": true,\n        \"subCatRef\": {\n            \"subCatName\": \"subCat1\",\n            \"subCatType\": \"type1\",\n            \"subCatId\": \"63bffed6071f1e51a323dd41\"\n        },\n        \"createdAt\": \"2023-01-12T12:48:34.429Z\",\n        \"updatedAt\": \"2023-01-12T12:48:34.429Z\",\n        \"childId\": \"63c001a2b7f10de48ca8bf8c\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "allCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/testing/allCategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"testing",
+						"allCategories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "allCategories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/testing/allCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"testing",
+								"allCategories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "884"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"374-TNScmjpODrYz1GqqOLdw9lwOFaY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Jan 2023 13:08:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"categorieslist\",\n    \"data\": [\n        {\n            \"categoryName\": \"cat1\",\n            \"categoryType\": \"product\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:35:46.697Z\",\n            \"updatedAt\": \"2023-01-12T12:42:25.651Z\",\n            \"subCats\": [\n                {\n                    \"subCatName\": \"subCat1\",\n                    \"subCatType\": \"type1\",\n                    \"subCatId\": \"63bffed6071f1e51a323dd41\"\n                },\n                {\n                    \"subCatName\": \"subCat2\",\n                    \"subCatType\": \"type1\",\n                    \"subCatId\": \"63bfff42508323e1bd831479\"\n                },\n                {\n                    \"subCatName\": \"subCat3\",\n                    \"subCatType\": \"type1\",\n                    \"subCatId\": \"63c00031fa23f37eaafca206\"\n                }\n            ],\n            \"categoryId\": \"63bffea2071f1e51a323dd3b\"\n        },\n        {\n            \"categoryName\": \"cat2\",\n            \"categoryType\": \"product\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:35:52.333Z\",\n            \"updatedAt\": \"2023-01-12T12:35:52.333Z\",\n            \"subCats\": [],\n            \"categoryId\": \"63bffea8071f1e51a323dd3e\"\n        },\n        {\n            \"categoryName\": \"cat3\",\n            \"categoryType\": \"product\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:42:06.805Z\",\n            \"updatedAt\": \"2023-01-12T12:42:06.805Z\",\n            \"subCats\": [],\n            \"categoryId\": \"63c0001efa23f37eaafca203\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "allSubCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/testing/allSubCategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"testing",
+						"allSubCategories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "allSubCategories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/testing/allSubCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"testing",
+								"allSubCategories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "989"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3dd-MTvCBfXa0kA4MCQiQv7y9d5A8IQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Jan 2023 13:15:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"sub categorieslist\",\n    \"data\": [\n        {\n            \"subCatName\": \"subCat1\",\n            \"subCatType\": \"type1\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:36:38.242Z\",\n            \"updatedAt\": \"2023-01-12T13:13:39.042Z\",\n            \"cat\": {\n                \"categoryName\": \"cat1\",\n                \"categoryType\": \"product\",\n                \"categoryId\": \"63bffea2071f1e51a323dd3b\"\n            },\n            \"childs\": [\n                {\n                    \"subChildName\": \"child5\",\n                    \"subChildType\": \"type3\",\n                    \"childId\": \"63c007827f912f59cce9604d\"\n                }\n            ],\n            \"subCatId\": \"63bffed6071f1e51a323dd41\"\n        },\n        {\n            \"subCatName\": \"subCat2\",\n            \"subCatType\": \"type1\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:38:26.957Z\",\n            \"updatedAt\": \"2023-01-12T12:38:26.957Z\",\n            \"cat\": {\n                \"categoryName\": \"cat1\",\n                \"categoryType\": \"product\",\n                \"categoryId\": \"63bffea2071f1e51a323dd3b\"\n            },\n            \"childs\": [],\n            \"subCatId\": \"63bfff42508323e1bd831479\"\n        },\n        {\n            \"subCatName\": \"subCat3\",\n            \"subCatType\": \"type1\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:42:25.576Z\",\n            \"updatedAt\": \"2023-01-12T12:42:25.576Z\",\n            \"cat\": {\n                \"categoryName\": \"cat1\",\n                \"categoryType\": \"product\",\n                \"categoryId\": \"63bffea2071f1e51a323dd3b\"\n            },\n            \"childs\": [],\n            \"subCatId\": \"63c00031fa23f37eaafca206\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "allSubChildCategories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/testing/allSubChildCategories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"testing",
+						"allSubChildCategories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "allSubChildCategories",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/testing/allSubChildCategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"testing",
+								"allSubChildCategories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1407"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"57f-oz/MUhMDBdMzILFGrlNNAxM4iiI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Jan 2023 13:20:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"sub childs list\",\n    \"data\": [\n        {\n            \"subChildName\": \"child1\",\n            \"subChildType\": \"type3\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:39:05.142Z\",\n            \"updatedAt\": \"2023-01-12T12:39:05.142Z\",\n            \"subCat\": {\n                \"subCatName\": \"subCat1\",\n                \"subCatType\": \"type1\",\n                \"subCatId\": \"63bffed6071f1e51a323dd41\"\n            },\n            \"childId\": \"63bfff69508323e1bd83147e\"\n        },\n        {\n            \"subChildName\": \"child2\",\n            \"subChildType\": \"type3\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:39:22.824Z\",\n            \"updatedAt\": \"2023-01-12T12:39:22.824Z\",\n            \"subCat\": {\n                \"subCatName\": \"subCat1\",\n                \"subCatType\": \"type1\",\n                \"subCatId\": \"63bffed6071f1e51a323dd41\"\n            },\n            \"childId\": \"63bfff7a508323e1bd831483\"\n        },\n        {\n            \"subChildName\": \"child3\",\n            \"subChildType\": \"type3\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:42:42.824Z\",\n            \"updatedAt\": \"2023-01-12T12:42:42.824Z\",\n            \"subCat\": {\n                \"subCatName\": \"subCat1\",\n                \"subCatType\": \"type1\",\n                \"subCatId\": \"63bffed6071f1e51a323dd41\"\n            },\n            \"childId\": \"63c00042fa23f37eaafca20b\"\n        },\n        {\n            \"subChildName\": \"child4\",\n            \"subChildType\": \"type3\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T12:48:34.429Z\",\n            \"updatedAt\": \"2023-01-12T12:48:34.429Z\",\n            \"subCat\": {\n                \"subCatName\": \"subCat1\",\n                \"subCatType\": \"type1\",\n                \"subCatId\": \"63bffed6071f1e51a323dd41\"\n            },\n            \"childId\": \"63c001a2b7f10de48ca8bf8c\"\n        },\n        {\n            \"subChildName\": \"child5\",\n            \"subChildType\": \"type3\",\n            \"status\": true,\n            \"createdAt\": \"2023-01-12T13:13:39.002Z\",\n            \"updatedAt\": \"2023-01-12T13:13:39.002Z\",\n            \"subCat\": {\n                \"subCatName\": \"subCat1\",\n                \"subCatType\": \"type1\",\n                \"subCatId\": \"63bffed6071f1e51a323dd41\"\n            },\n            \"childId\": \"63c007827f912f59cce9604d\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

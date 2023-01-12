@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose
   .connect(
-    "mongodb+srv://doadmin:GZi508eo216U79pR@db-mongodb-blr1-93357-acb8f016.mongo.ondigitalocean.com/testing?tls=true&authSource=admin&replicaSet=db-mongodb-blr1-93357"
+    "mongodb+srv://gana7777:Cz1cdLIMJoZZs3Dd@cluster0.3j7mi2z.mongodb.net/devTask?retryWrites=true&w=majority"
   )
   .then((con) => {
     console.log("connection success");
